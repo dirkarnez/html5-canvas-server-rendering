@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: 'KulminoituvaRegular';
+            src: url('http://www.miketaylr.com/f/kulminoituva.ttf');
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="myCanvas" width="5000" height="5000" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+        
+    <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var kitty = new Image();
+    kitty.src = 'http://i954.photobucket.com/albums/ae30/rte148/891blog_keyboard_cat.gif';
+    kitty.onload = function(){
+        ctx.drawImage(this, 0,0,this.width, this.height);
+        ctx.font         = '68px KulminoituvaRegular';
+        ctx.fillStyle = 'orangered';
+        ctx.textBaseline = 'top';
+        ctx.fillText  ('Keyboard Cat', 0, 270);
+    };
+    
+    </script>
+</body>
+</html>
